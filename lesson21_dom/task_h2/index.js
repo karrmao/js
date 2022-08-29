@@ -6,12 +6,6 @@ export const getItemsList = () => {
 
 getItemsList();
 
-// /*export*/ const getItemsArray = () => {
-//
-// };
-
-// getItemsArray();
-
 export const getItemsArray = () => {
   //const nodeElementList = document.querySelectorAll('.tool');
   //   const elementsArray = Array.from(nodeElementList);

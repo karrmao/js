@@ -13,4 +13,4 @@ export const createButton = (buttonText) => {
   document.querySelector('body').append(addButton);
 };
 
-//createButton1('Button2');
+//createButton('Button');

@@ -7,10 +7,10 @@
 // };
 // createButton1('Button1');
 
-export const createButton = (buttonText) => {
+const createButton = (buttonText) => {
   const addButton = document.createElement('button');
-  addButton.textContent = `<button>${buttonText}</button>`;
+  addButton.textContent = `${buttonText}`;
   document.querySelector('body').append(addButton);
 };
 
-//createButton('Button2');
+//createButton1('Button2');

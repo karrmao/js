@@ -7,13 +7,13 @@ export const getTitle = () => {
 getTitle();
 //=> I am Front-End developer
 
-export const getDscription = () => {
+export const getDescription = () => {
   const innerText = document.querySelector('.about').innerText;
   console.dir(innerText);
   return innerText;
 };
 
-getDscription();
+getDescription();
 //=> I am good at HTML / CSS and JavaScript
 
 export const getPlans = () => {

@@ -1,4 +1,4 @@
-export const tasks = [
+/*export*/ const tasks = [
   { text: 'Buy milk', done: false },
   { text: 'Buy meat', done: true },
   { text: 'Visit party', done: false },

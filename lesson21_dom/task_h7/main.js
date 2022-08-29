@@ -7,10 +7,16 @@
 // };
 // createButton1('Button1');
 
-export const createButton = (buttonText) => {
-  const addButton = document.createElement('button');
-  addButton.textContent = `${buttonText}`;
-  document.querySelector('body').append(addButton);
-};
+// export const createButton = (buttonText) => {
+//   const addButton = document.createElement('button');
+//   addButton.textContent = `${buttonText}`;
+//   document.querySelector('body').append(addButton);
+// };
 
 //createButton('Button');
+
+export const createButton = (buttonText) => {
+  const newButton = document.createElement('button');
+  newButton.textContent = `${buttonText}`;
+  document.querySelector('body').append(newButton);
+};

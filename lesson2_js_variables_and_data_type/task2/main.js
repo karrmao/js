@@ -1,0 +1,28 @@
+const a = 17;
+console.log('a :', a);
+const b = 17.17;
+console.log('b :', b);
+const c = '17';
+console.log('c :', c);
+const d = '17';
+console.log('d :', d);
+const e = "I'm a string";
+console.log('e :', e);
+const f = false;
+console.log('f :', f);
+const g = true;
+console.log('g :', g);
+const h = null;
+console.log('h :', h);
+const i = undefined;
+console.log('i :', i);
+const j = Symbol("I'm a Symbol");
+console.log('j :', j);
+const k = { name: 'John' };
+console.log('k :', k);
+const l = [1, 2, 3, 4];
+console.log('l :', l);
+const m = function run() {
+  return 17;
+};
+console.log('m :', m());

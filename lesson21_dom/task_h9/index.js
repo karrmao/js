@@ -6,7 +6,7 @@ export const finishForm = () => {
   addInput.setAttribute('name', 'login');
   findInput.prepend(addInput);
 
-  findInput.lastElementChild.setAttribute('type', 'pasword');
+  findInput.lastElementChild.setAttribute('type', 'password');
 };
 
 //finishForm();

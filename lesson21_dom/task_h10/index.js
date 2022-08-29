@@ -1,7 +1,7 @@
 export const manageClasses = () => {
   const classOne = document.querySelector('.one');
   classOne.classList.add('selected');
-  //=> class = "one selected"
+  //=> class = "one +selected"
 
   const classTwo = document.querySelector('.two');
   classTwo.classList.remove('selected');
@@ -14,7 +14,7 @@ export const manageClasses = () => {
   const classFour = document.querySelector('.four');
   if (classFour.classList.contains('some-class')) {
     classFour.classList.add('another-class');
-  }
+  } //=> if class="four some-class" have = 'some-class' +another-class
 };
 
-//manageClasses();
+manageClasses();

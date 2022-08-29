@@ -1,4 +1,4 @@
-export const squaredNumbers = () => {
+/*export*/ const squaredNumbers = () => {
   const listItems = [...document.querySelectorAll('.number')];
 
   listItems.map((num) => {
@@ -6,4 +6,4 @@ export const squaredNumbers = () => {
     num.dataset.squaredNumber = squered;
   });
 };
-//squaredNumbers();
+squaredNumbers();

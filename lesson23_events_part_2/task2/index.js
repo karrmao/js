@@ -1,6 +1,5 @@
-/********************************/
-/********************************/
-//генеруємо ряди
+/*******************************************/
+/*Генератор↓↓↓↓↓↓↓ для: секторів(3) */
 const generateNumbersRange = (from, to) => {
   const result = [];
 
@@ -9,79 +8,63 @@ const generateNumbersRange = (from, to) => {
   }
   return result;
 };
-
-/********************************/
-//генеруємо строки в середині сектора
+/*******************************************/
+/*Згенеруємо сидіння 🪑🪑🪑🪑🪑*/
 const getLineSeats = () => {
   return generateNumbersRange(1, 10)
     .map(
-      (seatNumber) => `
-    <div 
-    class="sector__seat" 
-    data-seat-number="${seatNumber}"
-    ></div>`
+      (seatNumber) =>
+        `<div class="sector__seat" data-seat-number="${seatNumber}"></div>`
     )
     .join('');
 };
 /********************************/
-//генеруємо строки в середині сектора
+/*Згенеруємо лінії ↓↓↓↓↓↓↓*/
 const getSectorLines = () => {
   const seatsString = getLineSeats();
   return generateNumbersRange(1, 10)
     .map(
       (lineNumber) =>
-        `<div
-         class="sector__line"
-          data-line-number="${lineNumber}"
-          >${seatsString}</div>
-          `
+        `<div class="sector__line" data-line-number="${lineNumber}">${seatsString}</div>`
     )
     .join('');
-}; /*Наповнить сидіннями */
-
+};
 /********************************/
+/***Arena***/
 const arenaElem = document.querySelector('.arena');
 
 const renderArena = () => {
-  //знаходио Арену
   const lineString = getSectorLines();
-  //генеруємо сектори
+  //Згенеруємо сектори ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
   const sectorsString = generateNumbersRange(1, 3)
     .map(
-      (sectorNumber) => `
-      <div
-       class="sector" 
-       data-sector-number="${sectorNumber}"
-       >${lineString}</div>`
+      (sectorNumber) =>
+        `<div class="sector" data-sector-number="${sectorNumber}">${lineString}</div>`
     )
     .join('');
-  //інтенгруємо сектори в арену
-  arenaElem.innerHTML = sectorsString;
+
+  arenaElem.innerHTML = sectorsString; //( згенеровані 3 сектори)
+  //можна замість innerHTML застос. append
 };
 /********************************/
-/********************************/
-const onSeatSelected = (event) => {
-  //перевірка чи сидіння
+/*Згенеруємо лінії ↓↓↓↓↓↓↓*/
+const onSeatSelect = (event) => {
+  //якщо елемент містить  клас 'sector__seat' то - це 🪑🪑🪑
   const isSeat = event.target.classList.contains('sector__seat');
-  //=> якщо подія.елемент.класуюмістить('.sector__seat')(це значить що це сидіння)
-
   if (!isSeat) {
-    //=> не сидіння
+    //Не 🪑🪑🪑 то виходимо
     return;
   }
-  //місце розташування сидіння
-  const seatNumber = event.target.dataset.seatNumber;
-  //в якій лінії .closest()- знайде найближчу лінію, .dataset.lineNumber(data-line-number)
-  const lineNumber = event.target.closest('.sector__line').dataset.lineNumber;
-  const sectorNumber = event.target.closest('.sector').dataset.sectorNumber;
-
-  //вивід загальної інформації на табло
-  const selectedSeatElement = document.querySelector('.board__selected-seat');
-
-  selectedSeatElement.textContent = `S ${sectorNumber} - L ${lineNumber} - L ${seatNumber}`;
+  //Отримуємо наші значення ↓↓↓↓↓↓↓
+  const seatNumber = event.target.dataset.seatNumber; //Отримуємо № 🪑🪑🪑
+  const lineNumber = event.target.closest('.sector__line').dataset.lineNumber; //Отримуємо № Стовпця
+  const sectorNumber = event.target.closest('.sector').dataset.sectorNumber; //Отримуємо № Сектор
+  //Наше 🖥
+  const selectedSeatElem = document.querySelector('.board__selected-seat'); //Підключаємо 🖥
+  selectedSeatElem.textContent = `Sec ${sectorNumber} - Lin ${lineNumber} - Sea ${seatNumber}`; //Виводимо на 🖥
 };
-arenaElem.addEventListener('click', onSeatSelected);
-/********************************/
-/********************************/
-
+//підключаємо клік по Arena
+arenaElem.addEventListener('click', onSeatSelect);
+/*************/
 renderArena();
+/*************/

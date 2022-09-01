@@ -1,4 +1,4 @@
-export const formater = new Intl.DateTimeFormat('en', {
+export const formatter = new Intl.DateTimeFormat('en', {
   timeZone: 'UTC',
   hour: '2-digit',
   minute: '2-digit',
@@ -6,7 +6,7 @@ export const formater = new Intl.DateTimeFormat('en', {
 });
 
 const getGreenwichTime = (date) => {
-  return formater.format(date);
+  return formatter.format(date);
 };
 
 console.log(getGreenwichTime(new Date()));

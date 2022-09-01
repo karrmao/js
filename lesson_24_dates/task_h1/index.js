@@ -1,4 +1,4 @@
-export function getDiff(startDate, endDate) {
+export const getDiff = (startDate, endDate) => {
   const difTime = Math.abs(startDate - endDate);
   //console.log(difTime);
 
@@ -13,7 +13,7 @@ export function getDiff(startDate, endDate) {
     days * 24 * 60 * 60;
 
   return `${days}d ${hours}h ${minutes}m ${seconds}s`;
-}
+};
 
 const firstDate = new Date(2022, 8, 5, 18, 00);
 const lastDate = new Date(2022, 8, 3, 17, 00);

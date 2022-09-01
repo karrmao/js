@@ -14,8 +14,8 @@ export const getDiff = (startDate, endDate) => {
   return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 };
 
-const firstDate = new Date(2022, 8, 5, 18, 00);
-const lastDate = new Date(2022, 8, 3, 17, 00);
+const firstDate = new Date(2022, 8, 5, 18, 0, 0);
+const lastDate = new Date(2022, 8, 3, 17, 0, 0);
 
 console.log(getDiff(firstDate, lastDate));
 //=>  2d 1h 0m 0s

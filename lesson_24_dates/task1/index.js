@@ -1,8 +1,7 @@
 // const dayOfWeek = (date, days) => {
 //   const day = new Date(date).getDate();
-//   //console.log(day);
 //   const dayInFuture = new Date(date).setDate(day + days);
-//   // console.log(dayInFuture);
+//
 //   return dayInFuture;
 // };
 // /*************************************************/
@@ -11,13 +10,13 @@
 // /*************************************************/
 // const result = dayOfWeek(new Date(2022, 8, 1), 5);//2022/[Sep8]/1 + 5
 // console.log(new Date(result));
-// //=> Wed Dec 07 2022 00:00:00 GMT+0200
-//
+//=> Wed Dec 07 2022 00:00:00 GMT+0200
+
 /*************************************************/
 //T1
 const weekDays = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'St'];
 
-export const dayOfWeek = (date, days) => {
+/*export*/ const dayOfWeek = (date, days) => {
   const day = new Date(date).getDate();
   const dayInFuture = new Date(date).setDate(day + days);
 

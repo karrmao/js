@@ -15,7 +15,7 @@ localStorage.setItem('age', JSON.stringify(17));
 
 // console.log(getLocalStorageData());
 /*********************************Fix ERROR*********************************/
-const getLocalStorageData = () => {
+export const getLocalStorageData = () => {
   return Object.entries(localStorage).reduce((acc, [key, value]) => {
     /*********/
     let newValue;

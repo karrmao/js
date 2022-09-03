@@ -5,24 +5,24 @@ export const calc = (initValue) => {
   let result = initValue;
 
   const calculator = {
-    add(value) {
-      result += value;
+    add(number) {
+      result += number;
       //return this or
       return calculator;
     },
 
-    substract(value) {
-      result -= value;
+    substract(number) {
+      result -= number;
       return this;
     },
 
     mult(value) {
-      result *= value;
+      result *= number;
       return this;
     },
 
     div(value) {
-      result /= value;
+      result /= number;
       return this;
     },
 

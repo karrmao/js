@@ -14,6 +14,7 @@ localStorage.setItem('age', JSON.stringify(17));
 // };
 
 // console.log(getLocalStorageData());
+//ERROR
 /*********************************Fix ERROR*********************************/
 export const getLocalStorageData = () => {
   return Object.entries(localStorage).reduce((acc, [key, value]) => {
@@ -33,3 +34,7 @@ export const getLocalStorageData = () => {
 };
 
 console.log(getLocalStorageData());
+//=> {age: 17, name: 'Tom', hobbies: {…}}
+//     age: 17
+//     hobbies: {name: 'Tom'}
+//     name: "Tom"

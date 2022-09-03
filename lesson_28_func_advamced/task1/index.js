@@ -16,12 +16,12 @@ export const calc = (initValue) => {
       return this;
     },
 
-    mult(value) {
+    mult(number) {
       result *= number;
       return this;
     },
 
-    div(value) {
+    div(number) {
       result /= number;
       return this;
     },

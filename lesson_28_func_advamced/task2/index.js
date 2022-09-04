@@ -29,15 +29,15 @@ const tree = {
   ],
 };
 
-export const marckFavorites = (tree, favorites) => {
+export const markFavorites = (tree, favorites) => {
   const isFavorites = favorites.includes(tree.id);
 
   return {
     ...tree,
     isFavorites,
-    nodes: tree.nodes.map((childNode) => marckFavorites(childNode, favorites)),
+    nodes: tree.nodes.map((childNode) => markFavorites(childNode, favorites)),
   };
 };
 
-const result = marckFavorites(tree, favorites);
+const result = markFavorites(tree, favorites);
 console.log(result);

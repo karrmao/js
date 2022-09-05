@@ -1,7 +1,7 @@
-const add3 = (value) => value + 3;
-const mult2 = (value) => value * 2;
-const div4 = (value) => value / 4;
-const mult10 = (value) => value * 10;
+const add3 = (value) => value + 3; //3 + 3 = 6
+const mult2 = (value) => value * 2; //6 * 2 = 12
+const div4 = (value) => value / 4; //12 / 4 = 3
+const mult10 = (value) => value * 10; //3 * 10 = 30
 
 export const comprose =
   (...funcs) =>
@@ -10,4 +10,4 @@ export const comprose =
   };
 
 const doEverithing = comprose(add3, mult2, div4, mult10);
-console.log(doEverithing(3));
+console.log(doEverithing(3)); //=> 30

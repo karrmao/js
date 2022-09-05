@@ -8,7 +8,7 @@ export const shmoment = (data) => {
         return this;
       }
 
-      if (text === 'month') {
+      if (text === 'months') {
         currentDate.setMonth(currentDate.getMonth() + number);
         return this;
       }
@@ -45,7 +45,7 @@ export const shmoment = (data) => {
         return this;
       }
 
-      if (text === 'month') {
+      if (text === 'months') {
         currentDate.setMonth(currentDate.getMonth() - number);
         return this;
       }
@@ -90,7 +90,7 @@ console.log('testData###', testData);
 
 const result = shmoment(testData)
   .add('years', 7)
-  .add('month', 3)
+  .add('months', 3)
   .add('days', 1)
   .add('hours', 4)
   .add('minutes', 6)
@@ -98,7 +98,7 @@ const result = shmoment(testData)
   .add('milliseconds', 55)
 
   .subtract('years', 14)
-  .subtract('month', 4)
+  .subtract('months', 4)
   .subtract('days', 19)
   .subtract('hours', 22)
   .subtract('minutes', 31)

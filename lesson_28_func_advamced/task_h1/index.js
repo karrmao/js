@@ -1,79 +1,140 @@
-export const shmoment = (data) => {
+// export const shmoment = (data) => {
+//   const currentDate = new Date(data);
+
+//   const calcData = {
+//     add(text, number) {
+//       if (text === 'years') {
+//         currentDate.setFullYear(currentDate.getFullYear() + number);
+//         return this;
+//       }
+
+//       if (text === 'months') {
+//         currentDate.setMonth(currentDate.getMonth() + number);
+//         return this;
+//       }
+
+//       if (text === 'days') {
+//         currentDate.setDate(currentDate.getDate() + number);
+//         return this;
+//       }
+
+//       if (text === 'hours') {
+//         currentDate.setHours(currentDate.getHours() + number);
+//         return this;
+//       }
+
+//       if (text === 'minutes') {
+//         currentDate.setMinutes(currentDate.getMinutes() + number);
+//         return this;
+//       }
+
+//       if (text === 'seconds') {
+//         currentDate.setSeconds(currentDate.getSeconds() + number);
+//         return this;
+//       }
+
+//       if (text === 'milliseconds') {
+//         currentDate.setMilliseconds(currentDate.getMilliseconds() + number);
+//         return this;
+//       }
+//     },
+
+//     subtract(text, number) {
+//       if (text === 'years') {
+//         currentDate.setFullYear(currentDate.getFullYear() - number);
+//         return this;
+//       }
+
+//       if (text === 'months') {
+//         currentDate.setMonth(currentDate.getMonth() - number);
+//         return this;
+//       }
+
+//       if (text === 'days') {
+//         currentDate.setDate(currentDate.getDate() - number);
+//         return this;
+//       }
+
+//       if (text === 'hours') {
+//         currentDate.setHours(currentDate.getHours() - number);
+//         return this;
+//       }
+
+//       if (text === 'minutes') {
+//         currentDate.setMinutes(currentDate.getMinutes() - number);
+//         return this;
+//       }
+
+//       if (text === 'seconds') {
+//         currentDate.setSeconds(currentDate.getSeconds() - number);
+//         return this;
+//       }
+
+//       if (text === 'milliseconds') {
+//         currentDate.setMilliseconds(currentDate.getMilliseconds() - number);
+//         return this;
+//       }
+//     },
+
+//     result() {
+//       return currentDate;
+//     },
+//   };
+
+//   return calcData;
+// };
+
+/***************************************/
+//ref
+const shmoment = (data) => {
   const currentDate = new Date(data);
 
   const calcData = {
     add(text, number) {
-      if (text === 'years') {
+      if (text === 'years')
         currentDate.setFullYear(currentDate.getFullYear() + number);
-        return this;
-      }
 
-      if (text === 'months') {
+      if (text === 'months')
         currentDate.setMonth(currentDate.getMonth() + number);
-        return this;
-      }
 
-      if (text === 'days') {
-        currentDate.setDate(currentDate.getDate() + number);
-        return this;
-      }
+      if (text === 'days') currentDate.setDate(currentDate.getDate() + number);
 
-      if (text === 'hours') {
+      if (text === 'hours')
         currentDate.setHours(currentDate.getHours() + number);
-        return this;
-      }
 
-      if (text === 'minutes') {
+      if (text === 'minutes')
         currentDate.setMinutes(currentDate.getMinutes() + number);
-        return this;
-      }
 
-      if (text === 'seconds') {
+      if (text === 'seconds')
         currentDate.setSeconds(currentDate.getSeconds() + number);
-        return this;
-      }
 
-      if (text === 'milliseconds') {
+      if (text === 'milliseconds')
         currentDate.setMilliseconds(currentDate.getMilliseconds() + number);
-        return this;
-      }
+
+      return this;
     },
 
     subtract(text, number) {
-      if (text === 'years') {
+      if (text === 'years')
         currentDate.setFullYear(currentDate.getFullYear() - number);
-        return this;
-      }
 
-      if (text === 'months') {
+      if (text === 'months')
         currentDate.setMonth(currentDate.getMonth() - number);
-        return this;
-      }
 
-      if (text === 'days') {
-        currentDate.setDate(currentDate.getDate() - number);
-        return this;
-      }
+      if (text === 'days') currentDate.setDate(currentDate.getDate() - number);
 
-      if (text === 'hours') {
+      if (text === 'hours')
         currentDate.setHours(currentDate.getHours() - number);
-        return this;
-      }
 
-      if (text === 'minutes') {
+      if (text === 'minutes')
         currentDate.setMinutes(currentDate.getMinutes() - number);
-        return this;
-      }
 
-      if (text === 'seconds') {
+      if (text === 'seconds')
         currentDate.setSeconds(currentDate.getSeconds() - number);
-        return this;
-      }
 
-      if (text === 'milliseconds') {
+      if (text === 'milliseconds')
         currentDate.setMilliseconds(currentDate.getMilliseconds() - number);
-        return this;
-      }
+      return this;
     },
 
     result() {

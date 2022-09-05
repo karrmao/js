@@ -75,23 +75,23 @@ export const shmoment = (data) => {
 };
 
 // test data
-const testData = new Date(2022, 3, 3, 15, 30, 0);
-console.log('testData###', testData);
+// const testData = new Date(2022, 3, 3, 15, 30, 0);
+// console.log('testData###', testData);
 
-const result = shmoment(testData)
-  .add('years', 7)
-  .add('month', 3)
-  .add('date', 1)
-  .add('hours', 4)
-  .add('minutes', 6)
-  .add('seconds', 17)
+// const result = shmoment(testData)
+//   .add('years', 7)
+//   .add('month', 3)
+//   .add('date', 1)
+//   .add('hours', 4)
+//   .add('minutes', 6)
+//   .add('seconds', 17)
 
-  .sub('years', 14)
-  .sub('month', 4)
-  .sub('date', 19)
-  .sub('hours', 22)
-  .sub('minutes', 31)
-  .sub('seconds', 55)
+//   .sub('years', 14)
+//   .sub('month', 4)
+//   .sub('date', 19)
+//   .sub('hours', 22)
+//   .sub('minutes', 31)
+//   .sub('seconds', 55)
 
-  .result();
-console.log(new Date(result));
+//   .result();
+// console.log(new Date(result));

@@ -106,4 +106,4 @@ const result = shmoment(testData)
   .subtract('milliseconds', 15)
 
   .result();
-console.log(new Date(result));
+console.log(result);

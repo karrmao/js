@@ -13,7 +13,7 @@ export const shmoment = (data) => {
         return this;
       }
 
-      if (text === 'date') {
+      if (text === 'days') {
         currentDate.setDate(currentDate.getDate() + number);
         return this;
       }
@@ -33,13 +33,13 @@ export const shmoment = (data) => {
         return this;
       }
 
-      if (text === 'miliseconds') {
+      if (text === 'milliseconds') {
         currentDate.setMilliseconds(currentDate.getMilliseconds() + number);
         return this;
       }
     },
 
-    sub(text, number) {
+    subtract(text, number) {
       if (text === 'years') {
         currentDate.setFullYear(currentDate.getFullYear() - number);
         return this;
@@ -50,7 +50,7 @@ export const shmoment = (data) => {
         return this;
       }
 
-      if (text === 'date') {
+      if (text === 'days') {
         currentDate.setDate(currentDate.getDate() - number);
         return this;
       }
@@ -70,7 +70,7 @@ export const shmoment = (data) => {
         return this;
       }
 
-      if (text === 'miliseconds') {
+      if (text === 'milliseconds') {
         currentDate.setMilliseconds(currentDate.getMilliseconds() - number);
         return this;
       }
@@ -91,19 +91,19 @@ console.log('testData###', testData);
 const result = shmoment(testData)
   .add('years', 7)
   .add('month', 3)
-  .add('date', 1)
+  .add('days', 1)
   .add('hours', 4)
   .add('minutes', 6)
   .add('seconds', 17)
-  .add('miliseconds', 55)
+  .add('milliseconds', 55)
 
-  .sub('years', 14)
-  .sub('month', 4)
-  .sub('date', 19)
-  .sub('hours', 22)
-  .sub('minutes', 31)
-  .sub('seconds', 55)
-  .sub('miliseconds', 15)
+  .subtract('years', 14)
+  .subtract('month', 4)
+  .subtract('days', 19)
+  .subtract('hours', 22)
+  .subtract('minutes', 31)
+  .subtract('seconds', 55)
+  .subtract('milliseconds', 15)
 
   .result();
 console.log(new Date(result));

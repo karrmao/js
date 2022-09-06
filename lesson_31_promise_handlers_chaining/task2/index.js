@@ -27,3 +27,6 @@ export const asyncCalculator = (num) =>
     );
 
 asyncCalculator(5);
+//=> Initial value: 5
+//=> Squared value: 25
+//=> Doubled value: 50

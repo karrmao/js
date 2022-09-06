@@ -18,11 +18,13 @@ export const requestUserData = (userId) => {
   return request;
 };
 
-requestUserData('broken')
-  .catch((error) => {
-    console.log(error);
-    throw new Error(error);
-  })
-  .then((data) => console.log(data))
-  .catch((err) => console.log(err))
-  .finally(() => console.log('finally'));
+// requestUserData('broken')
+//   .catch((error) => {
+//     console.log(error);
+//     throw new Error(error);
+//   })
+//   .then((data) => console.log(data))
+//   .catch((err) => console.log(err))
+//   .finally(() => console.log('finally'));
+
+requestUserData('userId777').then((data) => console.log(data));

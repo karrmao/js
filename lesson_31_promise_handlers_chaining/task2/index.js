@@ -12,7 +12,7 @@ export const asyncCalculator = (num) =>
             const result = num * num;
             console.log(`Squared value: ${result}`);
             resolve(result);
-          }, 300);
+          }, 500);
         })
     )
     .then(
@@ -22,7 +22,7 @@ export const asyncCalculator = (num) =>
             const result = num * 2;
             console.log(`Doubled value: ${result}`);
             resolve(result);
-          }, 300);
+          }, 500);
         })
     );
 

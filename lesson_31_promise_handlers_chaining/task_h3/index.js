@@ -1,8 +1,8 @@
-export const delay = () =>
+export const delay = (time) =>
   new Promise((resolve) => {
     setTimeout(() => {
       console.log('Done');
-    }, 3000);
+    }, time);
   });
 
-delay();
+delay(3000);

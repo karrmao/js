@@ -24,7 +24,7 @@ const servers = [
 ];
 
 export const getUserASAP = (userId) => {
-  const userUrls = servers.map((serverUrl) => `${serverUrl}/users/${userId}`);
+  const userUrls = servers.map((serverUrl) => `${serverUrl}/${userId}`);
 
   const requests = userUrls.map((userUrl) => request(userUrl));
 

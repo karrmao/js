@@ -2,7 +2,7 @@ const getRandomNumber = (from, to) => from + Math.random() * (to - from);
 
 const request = (url) =>
   new Promise((resolve) => {
-    const randomDelay = getRandomNumber(1000, 3000);
+    const rendomDelay = getRandomNumber(1000, 3000);
 
     setTimeout(() => {
       resolve({
@@ -10,9 +10,9 @@ const request = (url) =>
           name: 'Tom',
           age: 17,
         },
-        sorce: url,
+        source: url,
       });
-    }, randomDelay);
+    }, rendomDelay);
   });
 
 const servers = [
@@ -21,8 +21,8 @@ const servers = [
   'https://server.com/ua',
 ];
 
-export const getUserASAP = (userId) => {
-  const userUrls = servers.map((serverUrl) => `${serverUrl}/${userId}`);
+export const getUserASAP = (userid) => {
+  const userUrls = servers.map((serverUrl) => `${serverUrl}${userid}`);
 
   const requests = userUrls.map((userUrl) => request(userUrl));
 

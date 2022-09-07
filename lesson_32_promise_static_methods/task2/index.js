@@ -15,8 +15,6 @@ const request = (url) =>
     }, randomDelay);
   });
 
-//console.log(getRandomNumber(1000, 3000)); //=> 1549.6504907406688...
-
 const servers = [
   'https://server.com/usa',
   'https://server.com/eu',

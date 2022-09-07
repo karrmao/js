@@ -10,7 +10,7 @@ const asyncNum1 = getWalueWithDelay(56, 1000);
 const asyncNum2 = getWalueWithDelay(undefined, 2000);
 const asyncNum3 = getWalueWithDelay('10', 1000);
 
-const getSum = (numbers) =>
+export const getSum = (numbers) =>
   numbers
     .filter((value) => !isNaN(value))
     .feduce((acc, num) => acc + Number(num), 0);
@@ -21,6 +21,4 @@ const asyncSum = (...asyncNumbers) => {
     .catch(() => Promise.reject(new Error(`Can't calculate`)));
 };
 
-asyncSum(asyncNum1, Promise.reject(new Error('err')), asyncNum3).then(
-  (result) => console.log(result)
-);
+asyncSum(asyncNum1, asyncNum2, asyncNum3).then((result) => console.log(result));

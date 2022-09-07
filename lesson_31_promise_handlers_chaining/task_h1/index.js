@@ -8,12 +8,13 @@ const successPromise = new Promise((resolve) => {
 
 successPromise
   .then((number) => {
+    // console.log('number:', number);//=> 32/2
     const halfNumber = number / 2;
     return halfNumber;
   })
   .then((number) => {
     /* fix this handler */
-    const squaredNumber = number * number;
+    const squaredNumber = number * number; //=>16
     //console.log(squaredNumber);
     return squaredNumber;
   })

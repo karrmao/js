@@ -24,3 +24,7 @@ export const asyncSum = (...asyncNumbers) => {
 asyncSum(asyncNumber1, asyncNumber2, asyncNumber3).then((result) =>
   console.log(result)
 );
+//=>56
+//=>10
+//=>undefined
+//=>66

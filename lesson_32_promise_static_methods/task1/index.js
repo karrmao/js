@@ -5,9 +5,9 @@ const getWalueWithDelay = (value, delay) =>
       resolve(value);
     }, delay);
   });
-const asyncNum1 = getWalueWithDelay(56, 1000);
-const asyncNum2 = getWalueWithDelay(undefined, 2000);
-const asyncNum3 = getWalueWithDelay('10', 1000);
+const asyncNumber1 = getWalueWithDelay(56, 1000);
+const asyncNumber2 = getWalueWithDelay(undefined, 2000);
+const asyncNumber3 = getWalueWithDelay('10', 1000);
 
 export const getSum = (numbers) =>
   numbers
@@ -20,4 +20,6 @@ const asyncSum = (...asyncNumbers) => {
     .catch(() => Promise.reject(new Error(`Can't calculate`)));
 };
 
-asyncSum(asyncNum1, asyncNum2, asyncNum3).then((result) => console.log(result));
+asyncSum(asyncNumber1, asyncNumber2, asyncNumber3).then((result) =>
+  console.log(result)
+);

@@ -1,4 +1,4 @@
-const getWalueWithDelay = (value, delay) =>
+const getValueWithDelay = (value, delay) =>
   new Promise((resolve) => {
     setTimeout(() => {
       console.log(value);
@@ -6,9 +6,9 @@ const getWalueWithDelay = (value, delay) =>
     }, delay);
   });
 
-const asyncNumber1 = getWalueWithDelay(56, 1000);
-const asyncNumber2 = getWalueWithDelay(undefined, 2000);
-const asyncNumber3 = getWalueWithDelay('10', 1000);
+const asyncNumber1 = getValueWithDelay(56, 1000);
+const asyncNumber2 = getValueWithDelay(undefined, 2000);
+const asyncNumber3 = getValueWithDelay('10', 1000);
 
 const getSum = (numbers) =>
   numbers

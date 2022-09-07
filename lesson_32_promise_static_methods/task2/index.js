@@ -30,3 +30,5 @@ const getUserASAP = (userId) => {
 
   return Promise.race(requests);
 };
+
+getUserASAP('user-id-333').then((res) => console.log(res));

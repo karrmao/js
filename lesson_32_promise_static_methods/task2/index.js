@@ -22,7 +22,7 @@ const servers = [
 ];
 
 export const getUserASAP = (userid) => {
-  const userUrls = servers.map((serverUrl) => `${serverUrl}${userid}`);
+  const userUrls = servers.map((serverUrl) => `${serverUrl}/${userid}`);
 
   const requests = userUrls.map((userUrl) => request(userUrl));
 
@@ -30,3 +30,4 @@ export const getUserASAP = (userid) => {
 };
 
 getUserASAP('user-id-333').then((res) => console.log(res));
+//=>{userData: {…}, source: 'https://server.com/eu/user-id-333'}

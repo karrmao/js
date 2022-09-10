@@ -1,14 +1,13 @@
 const baseUrl = 'https://5e5cf5eb97d2ea0014796f01.mockapi.io/api/v1/tasks';
 
 export function getTasksList() {
-  return fetch(baseUrl).then((arrayTasks) => arrayTasks.json());
+  return fetch(baseUrl).then((response) => response.json());
+  //console.log(response));
 }
 
-// function getTaskById(taskId) {
+export function getTaskById(taskId) {}
 
-// }
-
-// //examples;
+//examples;
 // getTasksList().then((tasksList) => {
 //   console.log(tasksList); // ==> [ {'id':'1', 'isDone':false ... }, {'id':'2', 'isDone':false ... }, ...]
 // });

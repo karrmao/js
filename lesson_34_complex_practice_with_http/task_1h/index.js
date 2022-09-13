@@ -1,14 +1,14 @@
 const baseUrl = 'https://6320396f9f82827dcf27b215.mockapi.io/api/v1/users';
 
-function getUsersList() {
+export function getUsersList() {
   return fetch(baseUrl).then((response) => response.json());
 }
 
-function getUserById(userId) {
+export function getUserById(userId) {
   return fetch(`${baseUrl}/${userId}`).then((response) => response.json());
 }
 
-function createUser(userData) {
+export function createUser(userData) {
   return fetch(baseUrl, {
     method: 'POST',
     headers: {
@@ -18,13 +18,13 @@ function createUser(userData) {
   });
 }
 
-function deleteUser(userId) {
+export function deleteUser(userId) {
   return fetch(`${baseUrl}/${userId}`, {
     method: 'DELETE',
   });
 }
 
-function updateUser(userId, userData) {
+export function updateUser(userId, userData) {
   return fetch(`${baseUrl}/${userId}`, {
     method: 'PUT',
     headers: {

@@ -1,14 +1,14 @@
-const baseUrl = 'https://631f684022cefb1edc4b51be.mockapi.io/api/v1/users';
+const baseUrl = 'https://6320396f9f82827dcf27b215.mockapi.io/api/v1/users';
 
-export function getUsersList() {
+function getUsersList() {
   return fetch(baseUrl).then((response) => response.json());
 }
 
-export function getUserById(userId) {
+function getUserById(userId) {
   return fetch(`${baseUrl}/${userId}`).then((response) => response.json());
 }
 
-export function createUser(userData) {
+function createUser(userData) {
   return fetch(baseUrl, {
     method: 'POST',
     headers: {
@@ -18,14 +18,14 @@ export function createUser(userData) {
   });
 }
 
-export function deleteUser(userId) {
+function deleteUser(userId) {
   return fetch(`${baseUrl}/${userId}`, {
     method: 'DELETE',
   });
 }
 
-export function updateUser(userId, userData) {
-  fetch(`${baseUrl}/${userId}`, {
+function updateUser(userId, userData) {
+  return fetch(`${baseUrl}/${userId}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
@@ -61,10 +61,10 @@ const updatedUserData = {
   age: 17,
 };
 
-updateUser('10', updatedUserData).then(() => {
+updateUser('1', updatedUserData).then(() => {
   console.log('User updated');
 });
 
-deleteUser('15').then(() => {
+deleteUser('2').then(() => {
   console.log('User updated');
 });

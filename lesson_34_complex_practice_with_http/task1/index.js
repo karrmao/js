@@ -4,11 +4,11 @@ function getUsersList() {
   return fetch(baseUrl).then((response) => response.json());
 }
 
-export function getUserById(userId) {
+function getUserById(userId) {
   return fetch(`${baseUrl}/${userId}`).then(response.json());
 }
 
-export function createUser(userData) {
+function createUser(userData) {
   return fetch(baseUrl, {
     method: 'POST',
     headers: {
@@ -18,13 +18,13 @@ export function createUser(userData) {
   });
 }
 
-export function deleteUser(userId) {
+function deleteUser(userId) {
   return fetch(`${baseUrl}/${userId}`, {
     method: 'DELETE',
   });
 }
 
-export function updateUser(userId, userData) {
+function updateUser(userId, userData) {
   fetch(`${baseUrl}/${userId}`, {
     method: 'PUT',
     headers: {
@@ -35,36 +35,36 @@ export function updateUser(userId, userData) {
 }
 
 //-- test data
-// getUsersList().then((users) => {
-//   console.log(users); // array of the user objects [{'id':'1', 'firstName':'Grayce' ... }, {'id':'2', 'firstName':'Ara' ... }, ...]
-// });
+getUsersList().then((users) => {
+  console.log(users); // array of the user objects [{'id':'1', 'firstName':'Grayce' ... }, {'id':'2', 'firstName':'Ara' ... }, ...]
+});
 
-// getUserById('2').then((userData) => {
-//   console.log(userData); // {'id':'2', 'firstName':'Ara' ... }
-// });
+getUserById('2').then((userData) => {
+  console.log(userData); // {'id':'2', 'firstName':'Ara' ... }
+});
 
-// const newUserData = {
-//   email: 'cool@email.com',
-//   firstName: 'Iron',
-//   lastName: 'Man',
-//   age: 42,
-// };
+const newUserData = {
+  email: 'cool@email.com',
+  firstName: 'Iron',
+  lastName: 'Man',
+  age: 42,
+};
 
-// createUser(newUserData).then(() => {
-//   console.log('User created');
-// });
+createUser(newUserData).then(() => {
+  console.log('User created');
+});
 
-// const updatedUserData = {
-//   email: 'new@email.com',
-//   firstName: 'John',
-//   lastName: 'Doe',
-//   age: 17,
-// };
+const updatedUserData = {
+  email: 'new@email.com',
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 17,
+};
 
-// updateUser('10', updatedUserData).then(() => {
-//   console.log('User updated');
-// });
+updateUser('10', updatedUserData).then(() => {
+  console.log('User updated');
+});
 
-// deleteUser('15').then(() => {
-//   console.log('User updated');
-// });
+deleteUser('15').then(() => {
+  console.log('User updated');
+});

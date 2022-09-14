@@ -1,8 +1,8 @@
-//'use strict';
+'use strict';
 
 export const fetchUser = async (userId) => {
   try {
-    const response = await fetch(`https://api.github.com/users/${userName}`);
+    const response = await fetch(`https://api.github.com/users/${userId}`);
     if (!response.ok) {
       return null;
     }

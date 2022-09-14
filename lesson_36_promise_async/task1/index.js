@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 export const fetchUser = async (userId) => {
   try {

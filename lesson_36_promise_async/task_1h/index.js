@@ -1,6 +1,6 @@
 'use strict';
 
-const getUsersBlogs = async (users) => {
+export const getUsersBlogs = async (users) => {
   try {
     const usersArr = users.map((userName) => {
       return fetch(`https://api.github.com/users/${userName}`).then(

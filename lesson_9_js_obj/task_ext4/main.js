@@ -1,41 +1,56 @@
- function compareObjects(firstObj, secondObj) {
-   const firstKeys = Object.keys(firstObj);
-   const secondKeys = Object.keys(secondObj);
+const customers = {
+  'customer-id-1': {
+    name: 'Denice',
+    age: 54,
+  },
+  'customer-id-2': {
+    name: 'Cicerone',
+    age: 17,
+  },
+  'customer-id-3': {
+    name: 'Bob',
+    age: 15,
+  },
+  'customer-id-4': {
+    name: 'Anna',
+    age: 55,
+  },
+};
 
-   if (firstKeys.length !== secondKeys.length) {
-     return false;
-   }
-   return firstKeys.every((key) => firstObj[key] === secondObj[key]);
- }
+// const getCustomersList = (obj) => {
+//   console.log(obj);
 
- // examples
- const obj1 = {
-   name: 'Tom',
-   age: 17,
- };
+//   const getElem = Object.entries(obj);
+//   console.log(getElem);
+//   console.log(typeof getElem);
 
- const obj2 = {
-   name: 'Bob',
-   age: 17,
- };
+//   const mapArr = getElem.map(([id, customer]) => {
+//     console.log('id: ', id);
+//     console.log('customer: ', customer);
+//     return { id, ...customer };
+//   });
+//   console.log(mapArr);
 
- const obj3 = {
-   name: 'Bob',
-   age: 17,
-   student: false,
- };
+//   const cortArr = mapArr.sort((a, b) => a.age - b.age);
+// };
 
- const obj4 = {
-   name: 'Tom',
-   age: 17,
- };
+//ref
+const getCustomersList = (obj) => {
+  return Object.entries(obj)
+    .map(([id, customer]) => ({
+      id,
+      ...customer,
+    }))
+    .sort((a, b) => a.age - b.age);
+  //.sort((a, b) => a.name - b.name);
+  // .sort((a, b) => a.id - b.id);
+};
 
- const obj5 = {
-   age: 17,
-   name: 'Tom',
- };
-
- console.log(compareObjects(obj1, obj2)); // ==> false
- console.log(compareObjects(obj2, obj3)); // ==> false
- console.log(compareObjects(obj1, obj4)); // ==> true
- console.log(compareObjects(obj4, obj5)); // ==> true
+//console.log(customers);
+console.log(getCustomersList(customers));
+/*[
+  {id: 'customer-id-3', name: 'Bob', age: 15},
+  {id: 'customer-id-2', name: 'Cicerone', age: 17},
+  {id: 'customer-id-1', name: 'Denice', age: 54},
+  {id: 'customer-id-4', name: 'Anna', age: 55},
+]*/

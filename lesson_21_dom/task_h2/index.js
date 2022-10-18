@@ -1,22 +1,14 @@
-export const getItemsList = () => {
-  const elementList = document.querySelectorAll('.technology');
-  console.dir(elementList);
-  return elementList;
+/*export*/ const getItemsList = () => {
+  const elementsList = document.querySelectorAll('.technology');
+  console.dir(elementsList);
+  return elementsList;
 };
 
-getItemsList();
-
-export const getItemsArray = () => {
-  //const nodeElementList = document.querySelectorAll('.tool');
-  //   const elementsArray = Array.from(nodeElementList);
-  //   console.dir(elementsArray);
-  //   return elementsArray;
-
-  //refactoring
-  const nodeElementList = Array.from(document.querySelectorAll('.tool'));
-  console.dir(nodeElementList);
-  return nodeElementList;
+/*export*/const getItemsArray = () => {
+  const elementsArray = Array.from(document.querySelectorAll('.tool'));
+  console.dir(elementsArray);
+  return elementsArray;
 };
 
-getItemsArray();
-/*export*/
+getItemsList(); //=> NodeList(4)
+getItemsArray(); //=> Array(4)

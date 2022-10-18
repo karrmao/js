@@ -10,5 +10,6 @@ export const getInputElement = () => {
   return inputElem;
 };
 
-getTitleElement();
-getInputElement();
+//--test data
+getTitleElement(); //=> h1.title
+getInputElement(); //=> input

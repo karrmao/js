@@ -4,3 +4,4 @@ const handleClick = (event) => {
 };
 
 [...btnsElement].map((el) => el.addEventListener('click', handleClick));
+//Array.from(btnsElement).map((el) => el.addEventListener('click', handleClick));

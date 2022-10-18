@@ -5,3 +5,4 @@ const handleClick = (event) => {
 };
 
 [...btnsElements].map((el) => el.addEventListener('click', handleClick));
+//Array.from(btnsElements).map((el) => el.addEventListener('click', handleClick));

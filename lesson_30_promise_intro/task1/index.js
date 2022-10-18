@@ -1,30 +1,33 @@
 export const addImage = (imgSrc) => {
-  const p = new Promise((resolveCb, rejectCb) => {
+  const p = new Promise((resolve, reject) => {
+    const containerElem = document.querySelector('.page');
     const imgElem = document.createElement('img');
     imgElem.setAttribute('alt', 'My Photo');
-
     imgElem.src = imgSrc;
-
-    const containerElem = document.querySelector('.page');
     containerElem.append(imgElem);
-
     const onImageLoaded = () => {
       const { width, height } = imgElem;
-      resolveCb({ width, height });
+      resolve({ width, height });
     };
-
     imgElem.addEventListener('load', onImageLoaded);
-
     imgElem.addEventListener('error', () =>
-      rejectCb(new Error('Image load is failed'))
+      reject(new Error('Image load is failed'))
     );
   });
   return p;
 };
 
 //--test data
-const result = addImage(
-  'https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg'
+//option - 1
+const resultPromise = addImage(
+  'https://p.bigstockphoto.com/**GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg'
 );
-result.then((data) => console.log(data));
-console.log(result);
+// //console.log(resultPromise);
+//optin-1 [Brocken code link!]
+resultPromise.catch((error) => console.log(error));
+//=>Error: Image load is failed
+//    at HTMLImageElement.<anonymous>
+
+// //optin-2
+resultPromise.then((data) => console.log(data));
+//=> {width: 1028, height: 432}

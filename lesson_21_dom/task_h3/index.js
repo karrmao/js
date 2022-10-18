@@ -4,6 +4,7 @@ export const getTitle = () => {
   return textContent;
 };
 
+//--test data
 getTitle();
 //=> I am Front-End developer
 
@@ -13,6 +14,7 @@ export const getDescription = () => {
   return innerText;
 };
 
+//--test data
 getDescription();
 //=> I am good at HTML / CSS and JavaScript
 
@@ -22,6 +24,7 @@ export const getPlans = () => {
   return innerHtml;
 };
 
+//--test data
 getPlans();
 //=> I will learn <b>Redux</b> and <b>React</b> soon
 
@@ -31,5 +34,9 @@ export const getGoal = () => {
   return outerHtml;
 };
 
+//--test data
 getGoal();
-/*export*/
+//=> <p class="goal">
+//     And will become <b>world class</b> software engineer in a year
+//   </p>
+

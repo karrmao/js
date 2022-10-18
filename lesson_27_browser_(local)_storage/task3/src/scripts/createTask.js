@@ -20,5 +20,5 @@ export const onCreateTask = () => {
 
   setItem('tasksList', newTasksList);
 
-  renderTasks();
+  renderTasks()/*renderTasks 1.3*/;
 };

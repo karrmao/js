@@ -6,7 +6,7 @@
  */
 
 const successPromise = new Promise((resolve) => {
-  resolve(new Number(67));
+  resolve(new Number(67));//Number(67) or 67
 });
 
 /*

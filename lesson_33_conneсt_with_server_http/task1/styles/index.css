@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* line 1, /Users/user/Desktop/GC/lesson_33_conneсt_with_server_http/task1/styles/index.scss */
+.page {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column; }
+
+/* line 9, /Users/user/Desktop/GC/lesson_33_conneсt_with_server_http/task1/styles/index.scss */
+.user {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  align-items: center; }
+  /* line 15, /Users/user/Desktop/GC/lesson_33_conneсt_with_server_http/task1/styles/index.scss */
+  .user__info {
+    text-align: center;
+    font-size: 24px;
+    margin: 32px; }
+  /* line 21, /Users/user/Desktop/GC/lesson_33_conneсt_with_server_http/task1/styles/index.scss */
+  .user__avatar {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%; }
+  /* line 27, /Users/user/Desktop/GC/lesson_33_conneсt_with_server_http/task1/styles/index.scss */
+  .user__name {
+    font-weight: 700; }
+  /* line 31, /Users/user/Desktop/GC/lesson_33_conneсt_with_server_http/task1/styles/index.scss */
+  .user__location {
+    opacity: 0.5; }
+
+/* line 36, /Users/user/Desktop/GC/lesson_33_conneсt_with_server_http/task1/styles/index.scss */
+.name-form {
+  margin: 0 auto; }
+  /* line 39, /Users/user/Desktop/GC/lesson_33_conneсt_with_server_http/task1/styles/index.scss */
+  .name-form__input {
+    height: 32px;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    flex: 1;
+    outline: none; }
+
+/* line 48, /Users/user/Desktop/GC/lesson_33_conneсt_with_server_http/task1/styles/index.scss */
+.btn {
+  height: 40px;
+  min-width: 64px;
+  border: 3px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-left: 16px; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,6 +1,6 @@
 /*export*/ class Vehicle {
   constructor(name, hasWheels) {
-    this.hasWheels = false;
+    this.hasWheels = hasWheels;
     this.name = name;
   }
 
@@ -38,3 +38,7 @@ shipChayka.move();
 shipChayka.stop();
 //=> Chayka lifting anchor down
 //=> Chayka stopped
+
+const shipGetmanSagaydachniy = new Ship('Getman Sagaydachniy', 15);
+console.log(shipGetmanSagaydachniy);
+//=> Ship {hasWheels: false, name: 'Getman Sagaydachniy', speed: 15}

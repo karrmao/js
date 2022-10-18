@@ -55,8 +55,23 @@ export const asyncCalculator = (num) =>
         })
     );
 
-//-- test data
-asyncCalculator(5);
-//=> Initial value: 5
-//=> Squared value: 25
-//=> Doubled value: 50
+//--test data
+// //option-1
+// asyncCalculator(4);
+// //=> Initial value: 4
+// //   Squred value: 16
+// //   Dubled value: 32
+
+// //option-2
+// asyncCalculator(4).then(value => console.log(value));
+// //=> Initial value: 4
+// //   Squred value: 16
+// //   Dubled value: 32
+// //   undefined
+
+//option-3
+asyncCalculator(4).then((value) => console.log(value));
+//=> Initial value: 4
+//   Squred value: 16
+//   Dubled value: 32
+//   32
